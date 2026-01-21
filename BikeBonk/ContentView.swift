@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var bikesMounted = BikeState.bikesMounted
+    @Environment(\.scenePhase) private var scenePhase
 
     private var backgroundGradient: LinearGradient {
         bikesMounted ? Theme.Warning.gradient : Theme.Safe.gradient
@@ -33,9 +34,15 @@ struct ContentView: View {
                                     .offset(x: 20, y: -10)
                             }
                     } else {
-                        Image(systemName: "checkmark.circle.fill")
+                        Image(systemName: "car.fill")
                             .font(.system(size: 120, weight: .medium))
                             .foregroundColor(.white)
+                            .overlay(alignment: .topTrailing) {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .font(.system(size: 36, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .offset(x: 20, y: -10)
+                            }
                     }
                 }
                 .onTapGesture(count: 2) {
@@ -72,6 +79,11 @@ struct ContentView: View {
         }
         .onAppear {
             bikesMounted = BikeState.bikesMounted
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active {
+                bikesMounted = BikeState.bikesMounted
+            }
         }
     }
 }

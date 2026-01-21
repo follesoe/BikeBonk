@@ -41,23 +41,15 @@ struct BikeBonkWidgetEntryView: View {
     var entry: BikeBonkEntry
     @Environment(\.widgetFamily) var family
 
-    private var backgroundGradient: LinearGradient {
-        entry.bikesMounted ? Theme.Warning.gradient : Theme.Safe.gradient
-    }
-
     var body: some View {
         Button(intent: ToggleBikesIntent()) {
-            ZStack {
-                backgroundGradient
-
-                switch family {
-                case .systemSmall:
-                    smallWidgetContent
-                case .systemMedium:
-                    mediumWidgetContent
-                default:
-                    smallWidgetContent
-                }
+            switch family {
+            case .systemSmall:
+                smallWidgetContent
+            case .systemMedium:
+                mediumWidgetContent
+            default:
+                smallWidgetContent
             }
         }
         .buttonStyle(.plain)
@@ -82,15 +74,9 @@ struct BikeBonkWidgetEntryView: View {
             iconView
                 .font(.system(size: 64, weight: .medium))
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(entry.bikesMounted ? "bikes_status_mounted" : "bikes_status_not_mounted")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.white)
-
-                Text("bikes_toggle_label")
-                    .font(.system(size: 12))
-                    .foregroundColor(.white.opacity(0.8))
-            }
+            Text(entry.bikesMounted ? "bikes_status_mounted" : "bikes_status_not_mounted")
+                .font(.system(size: 18, weight: .bold))
+                .foregroundColor(.white)
 
             Spacer()
         }
@@ -109,8 +95,14 @@ struct BikeBonkWidgetEntryView: View {
                         .offset(x: 8, y: -4)
                 }
         } else {
-            Image(systemName: "checkmark.circle.fill")
+            Image(systemName: "car.fill")
                 .foregroundColor(.white)
+                .overlay(alignment: .topTrailing) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundColor(.white)
+                        .offset(x: 8, y: -4)
+                }
         }
     }
 }
@@ -126,6 +118,7 @@ struct BikeBonkWidget: Widget {
                 .containerBackground(for: .widget) {
                     entry.bikesMounted ? Theme.Warning.gradient : Theme.Safe.gradient
                 }
+                .invalidatableContent()
         }
         .configurationDisplayName("BikeBonk")
         .description("Quick access to your bike rack status")
