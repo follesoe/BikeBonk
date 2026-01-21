@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BB12345A2F21700000DA7E16 /* BikeBonkWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AA2798742F21697D00DA7E16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +25,34 @@
 			remoteGlobalIDString = AA2798652F21697B00DA7E16;
 			remoteInfo = BikeBonk;
 		};
+		BB12345E2F21700000DA7E16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA27985E2F21697B00DA7E16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB12345F2F21700000DA7E16;
+			remoteInfo = BikeBonkWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB1234592F21700000DA7E16 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB12345A2F21700000DA7E16 /* BikeBonkWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AA2798662F21697B00DA7E16 /* BikeBonk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeBonk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2798732F21697D00DA7E16 /* BikeBonkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeBonkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA27987D2F21697D00DA7E16 /* BikeBonkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeBonkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeBonkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +69,16 @@
 		AA2798802F21697D00DA7E16 /* BikeBonkUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BikeBonkUITests;
+			sourceTree = "<group>";
+		};
+		BB1234572F21700000DA7E16 /* BikeBonkWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BikeBonkWidget;
+			sourceTree = "<group>";
+		};
+		BB1234582F21700000DA7E16 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB12345B2F21700000DA7E16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				AA2798682F21697B00DA7E16 /* BikeBonk */,
+				BB1234582F21700000DA7E16 /* Shared */,
+				BB1234572F21700000DA7E16 /* BikeBonkWidget */,
 				AA2798762F21697D00DA7E16 /* BikeBonkTests */,
 				AA2798802F21697D00DA7E16 /* BikeBonkUITests */,
 				AA2798672F21697B00DA7E16 /* Products */,
@@ -88,6 +133,7 @@
 				AA2798662F21697B00DA7E16 /* BikeBonk.app */,
 				AA2798732F21697D00DA7E16 /* BikeBonkTests.xctest */,
 				AA27987D2F21697D00DA7E16 /* BikeBonkUITests.xctest */,
+				BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,13 +148,16 @@
 				AA2798622F21697B00DA7E16 /* Sources */,
 				AA2798632F21697B00DA7E16 /* Frameworks */,
 				AA2798642F21697B00DA7E16 /* Resources */,
+				BB1234592F21700000DA7E16 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB1234602F21700000DA7E16 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AA2798682F21697B00DA7E16 /* BikeBonk */,
+				BB1234582F21700000DA7E16 /* Shared */,
 			);
 			name = BikeBonk;
 			packageProductDependencies = (
@@ -163,6 +212,29 @@
 			productReference = AA27987D2F21697D00DA7E16 /* BikeBonkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BB12345F2F21700000DA7E16 /* BikeBonkWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB1234612F21700000DA7E16 /* Build configuration list for PBXNativeTarget "BikeBonkWidgetExtension" */;
+			buildPhases = (
+				BB12345D2F21700000DA7E16 /* Sources */,
+				BB12345B2F21700000DA7E16 /* Frameworks */,
+				BB12345C2F21700000DA7E16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BB1234572F21700000DA7E16 /* BikeBonkWidget */,
+				BB1234582F21700000DA7E16 /* Shared */,
+			);
+			name = BikeBonkWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = BikeBonkWidgetExtension;
+			productReference = BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +256,9 @@
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = AA2798652F21697B00DA7E16;
 					};
+					BB12345F2F21700000DA7E16 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = AA2798612F21697B00DA7E16 /* Build configuration list for PBXProject "BikeBonk" */;
@@ -192,6 +267,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nb,
 			);
 			mainGroup = AA27985D2F21697B00DA7E16;
 			minimizedProjectReferenceProxies = 1;
@@ -203,6 +279,7 @@
 				AA2798652F21697B00DA7E16 /* BikeBonk */,
 				AA2798722F21697D00DA7E16 /* BikeBonkTests */,
 				AA27987C2F21697D00DA7E16 /* BikeBonkUITests */,
+				BB12345F2F21700000DA7E16 /* BikeBonkWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +300,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AA27987B2F21697D00DA7E16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB12345C2F21700000DA7E16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +337,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB12345D2F21700000DA7E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +356,11 @@
 			isa = PBXTargetDependency;
 			target = AA2798652F21697B00DA7E16 /* BikeBonk */;
 			targetProxy = AA27987E2F21697D00DA7E16 /* PBXContainerItemProxy */;
+		};
+		BB1234602F21700000DA7E16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB12345F2F21700000DA7E16 /* BikeBonkWidgetExtension */;
+			targetProxy = BB12345E2F21700000DA7E16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,6 +634,66 @@
 			};
 			name = Release;
 		};
+		BB1234622F21700000DA7E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BikeBonkWidget/BikeBonkWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PT677XPRWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = BikeBonkWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.BikeBonkWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB1234632F21700000DA7E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BikeBonkWidget/BikeBonkWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PT677XPRWH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = BikeBonkWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.BikeBonkWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +729,15 @@
 			buildConfigurations = (
 				AA27988E2F21697D00DA7E16 /* Debug */,
 				AA27988F2F21697D00DA7E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB1234612F21700000DA7E16 /* Build configuration list for PBXNativeTarget "BikeBonkWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB1234622F21700000DA7E16 /* Debug */,
+				BB1234632F21700000DA7E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
