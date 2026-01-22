@@ -1,0 +1,2 @@
+fastlane/screenshots/**/*.png filter=lfs diff=lfs merge=lfs -text
+*.xcassets/**/*.png filter=lfs diff=lfs merge=lfs -text
