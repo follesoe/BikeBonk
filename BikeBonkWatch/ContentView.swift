@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var bikesMounted = BikeState.bikesMounted
     @Environment(\.scenePhase) private var scenePhase
-    @StateObject private var connectivityManager = WatchConnectivityManager.shared
+    @StateObject private var syncManager = iCloudSyncManager.shared
 
     var body: some View {
         Button(action: {
@@ -30,26 +30,22 @@ struct ContentView: View {
         .onChange(of: bikesMounted) { _, newValue in
             BikeState.bikesMounted = newValue
             Feedback.play(forMountedState: newValue)
-            // Only sync if this is a local change, not a received update
-            if !connectivityManager.isReceivingUpdate {
-                connectivityManager.sendStateUpdate(bikesMounted: newValue)
-            }
         }
         .onAppear {
             bikesMounted = BikeState.bikesMounted
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
-                // First check if counterpart sent us an update
-                connectivityManager.syncReceivedContext()
-                // Then update UI from local state
+                // Refresh from iCloud when app becomes active
+                syncManager.refresh()
                 bikesMounted = BikeState.bikesMounted
-                // Sync to iPhone in case state was changed by complication
-                connectivityManager.sendStateUpdate(bikesMounted: BikeState.bikesMounted)
             }
         }
-        .onChange(of: connectivityManager.bikesMounted) { _, newValue in
-            bikesMounted = newValue
+        .onChange(of: syncManager.bikesMounted) { _, newValue in
+            // Update UI when iCloud sync receives external changes
+            if newValue != bikesMounted {
+                bikesMounted = newValue
+            }
         }
     }
 }

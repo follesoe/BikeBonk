@@ -23,7 +23,6 @@ struct SetBikesMountedIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {
         BikeState.bikesMounted = mounted
-        WatchConnectivityManager.shared.sendStateUpdate(bikesMounted: mounted)
 
         let message: String
         if mounted {
@@ -44,7 +43,6 @@ struct MarkBikesMountedIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {
         BikeState.bikesMounted = true
-        WatchConnectivityManager.shared.sendStateUpdate(bikesMounted: true)
         let message = String(localized: "bikes_status_mounted")
         return .result(dialog: IntentDialog(stringLiteral: message))
     }
@@ -58,7 +56,6 @@ struct MarkBikesRemovedIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {
         BikeState.bikesMounted = false
-        WatchConnectivityManager.shared.sendStateUpdate(bikesMounted: false)
         let message = String(localized: "bikes_status_not_mounted")
         return .result(dialog: IntentDialog(stringLiteral: message))
     }

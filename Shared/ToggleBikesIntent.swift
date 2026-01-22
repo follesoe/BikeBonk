@@ -16,7 +16,6 @@ struct ToggleBikesIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult {
         BikeState.toggle()
-        WatchConnectivityManager.shared.sendStateUpdate(bikesMounted: BikeState.bikesMounted)
         return .result()
     }
 }
