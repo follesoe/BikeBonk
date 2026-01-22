@@ -16,14 +16,11 @@ DERIVED_DATA="$PROJECT_DIR/.screenshots-derived-data"
 # iOS Device configurations for App Store (2026)
 IOS_DEVICES=(
     "iPhone 17 Pro Max"
-    "iPhone 17 Pro"
-    "iPhone 16e"
     "iPad Pro 13-inch (M5)"
 )
 
 # watchOS Device configurations
 WATCH_DEVICES=(
-    "Apple Watch Series 11 (46mm)"
     "Apple Watch Ultra 3 (49mm)"
 )
 
