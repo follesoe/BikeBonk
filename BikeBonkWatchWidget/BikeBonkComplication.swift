@@ -72,7 +72,7 @@ struct BikeBonkComplicationEntryView: View {
             AccessoryWidgetBackground()
             Image(systemName: Theme.icon(for: entry.bikesMounted))
                 .font(.system(size: 24, weight: .medium))
-                .foregroundStyle(entry.bikesMounted ? .red : .green)
+                .foregroundStyle(Theme.tintColor(for: entry.bikesMounted))
                 .widgetAccentable()
         }
     }
@@ -83,7 +83,7 @@ struct BikeBonkComplicationEntryView: View {
         HStack(spacing: 8) {
             Image(systemName: Theme.icon(for: entry.bikesMounted))
                 .font(.system(size: 28, weight: .medium))
-                .foregroundStyle(entry.bikesMounted ? .red : .green)
+                .foregroundStyle(Theme.tintColor(for: entry.bikesMounted))
                 .widgetAccentable()
 
             VStack(alignment: .leading, spacing: 2) {
@@ -92,7 +92,7 @@ struct BikeBonkComplicationEntryView: View {
                     .foregroundStyle(.secondary)
                 Text(entry.bikesMounted ? String(localized: "complication_status_mounted") : String(localized: "complication_status_clear"))
                     .font(.headline)
-                    .foregroundStyle(entry.bikesMounted ? .red : .green)
+                    .foregroundStyle(Theme.tintColor(for: entry.bikesMounted))
                     .widgetAccentable()
             }
 
@@ -114,7 +114,7 @@ struct BikeBonkComplicationEntryView: View {
     private var accessoryCornerView: some View {
         Image(systemName: Theme.icon(for: entry.bikesMounted))
             .font(.system(size: 21, weight: .medium))
-            .foregroundStyle(entry.bikesMounted ? .red : .green)
+            .foregroundStyle(Theme.tintColor(for: entry.bikesMounted))
             .widgetAccentable()
             .widgetLabel {
                 Text(entry.bikesMounted ? String(localized: "complication_corner_mounted") : String(localized: "complication_corner_clear"))

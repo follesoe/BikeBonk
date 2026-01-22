@@ -28,6 +28,9 @@ enum Theme {
 
         /// System sound ID for warning feedback (1305 = lock)
         static let soundID: UInt32 = 1305
+
+        /// Tint color for widgets and complications
+        static let tintColor = gradientMiddle
     }
 
     /// Safe state when no bikes are mounted.
@@ -48,6 +51,14 @@ enum Theme {
 
         /// System sound ID for success feedback (1305 = lock)
         static let soundID: UInt32 = 1305
+
+        /// Tint color for widgets and complications
+        static let tintColor = gradientMiddle
+    }
+
+    /// Returns the tint color for the current state.
+    static func tintColor(for bikesMounted: Bool) -> Color {
+        bikesMounted ? Warning.tintColor : Safe.tintColor
     }
 
     /// Returns the appropriate gradient for the current state.
