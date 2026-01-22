@@ -1,0 +1,5 @@
+app_identifier("no.follesoe.BikeBonkApp")
+apple_id("jonas+appleid@follesoe.no")
+
+# For more information about the Appfile, see:
+# https://docs.fastlane.tools/advanced/#appfile

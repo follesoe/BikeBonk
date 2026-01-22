@@ -4,11 +4,11 @@
 # Runs after Xcode Cloud clones the repository.
 #
 # Available environment variables:
-#   CI_BUILD_NUMBER      - Xcode Cloud build number
-#   CI_WORKFLOW          - Workflow name
-#   CI_XCODE_PROJECT     - Path to .xcodeproj
-#   CI_BRANCH            - Git branch name
-#   CI_COMMIT            - Git commit SHA
+#   CI_BUILD_NUMBER             - Xcode Cloud build number
+#   CI_WORKFLOW                 - Workflow name
+#   CI_PRIMARY_REPOSITORY_PATH  - Path to cloned repository
+#   CI_BRANCH                   - Git branch name
+#   CI_COMMIT                   - Git commit SHA
 
 set -e
 
@@ -17,19 +17,7 @@ echo "   Build number: ${CI_BUILD_NUMBER:-local}"
 echo "   Branch: ${CI_BRANCH:-unknown}"
 echo "   Commit: ${CI_COMMIT:-unknown}"
 
-# Automatically set build number from Xcode Cloud build number
-if [ -n "$CI_BUILD_NUMBER" ]; then
-    echo "📝 Setting build number to $CI_BUILD_NUMBER..."
-
-    # Update iOS app
-    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $CI_BUILD_NUMBER" "$CI_WORKSPACE/BikeBonk/Info.plist" 2>/dev/null || true
-
-    # Update watchOS app
-    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $CI_BUILD_NUMBER" "$CI_WORKSPACE/BikeBonkWatch/Info.plist" 2>/dev/null || true
-
-    # For projects using CURRENT_PROJECT_VERSION in build settings (more common):
-    cd "$CI_WORKSPACE"
-    agvtool new-version -all "$CI_BUILD_NUMBER" 2>/dev/null || echo "   agvtool not configured, skipping"
-fi
+# Build number is set via CURRENT_PROJECT_VERSION in Xcode Cloud workflow settings
+# Export compliance is set via INFOPLIST_KEY_ITSAppUsesNonExemptEncryption in build settings
 
 echo "✅ Post-clone complete"

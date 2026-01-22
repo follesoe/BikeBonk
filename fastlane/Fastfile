@@ -1,0 +1,32 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Upload metadata and screenshots to App Store Connect"
+  lane :metadata do
+    deliver(
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      force: true,  # Skip HTML preview
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload screenshots only to App Store Connect"
+  lane :screenshots do
+    deliver(
+      skip_binary_upload: true,
+      skip_metadata: true,
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload both metadata and screenshots to App Store Connect"
+  lane :upload_all do
+    deliver(
+      skip_binary_upload: true,
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+end
