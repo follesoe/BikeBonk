@@ -1,0 +1,28 @@
+Never drive into the garage with bikes on your roof again!
+
+BikeBonk is a simple app that helps you remember when bikes are mounted on your car's roof rack. With bold visual warnings, home screen widgets, Apple Watch support, and Siri integration, you'll always know your roof status before it's too late.
+
+FEATURES
+
+• Bold Visual States
+Full-screen color-coded display makes the status impossible to miss. Green means safe, red/orange means bikes are mounted.
+
+• Home Screen Widgets
+Add interactive widgets to your home screen. See your status at a glance and toggle it with a single tap.
+
+• Apple Watch App
+Check and toggle your bike status directly from your wrist. Perfect for when you're loading or unloading bikes.
+
+• Watch Complications
+Add BikeBonk to your watch face for instant status visibility. Supports circular, rectangular, inline, and corner complications.
+
+• Siri Voice Commands
+Just say "Check bikes in BikeBonk" or "Bikes mounted in BikeBonk" to check or update your status hands-free.
+
+• Shortcuts Integration
+Build powerful automations with the Shortcuts app. For example: "When I open my garage, remind me if bikes are mounted."
+
+• Works Offline
+All data is stored locally on your device. No account required, no data leaves your device.
+
+Perfect for cyclists, families with bike racks, and anyone who has ever had that heart-stopping moment of almost driving into a low clearance with bikes on the roof.

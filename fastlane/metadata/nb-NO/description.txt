@@ -1,0 +1,28 @@
+Kjør aldri inn i garasjen med sykler på taket igjen!
+
+BikeBonk er en enkel app som hjelper deg å huske når syklene er montert på bilens takstativ. Med tydelige visuelle advarsler, widgets på hjemskjermen, Apple Watch-støtte og Siri-integrasjon vil du alltid vite statusen før det er for sent.
+
+FUNKSJONER
+
+• Tydelige visuelle tilstander
+Fullskjerms fargekodede visning gjør statusen umulig å overse. Grønn betyr trygt, rød/oransje betyr at syklene er montert.
+
+• Widgets på hjemskjermen
+Legg til interaktive widgets på hjemskjermen. Se statusen med et blikk og endre den med ett trykk.
+
+• Apple Watch-app
+Sjekk og endre sykkelstatusen din rett fra håndleddet. Perfekt når du laster eller losser sykler.
+
+• Komplikasjoner på klokken
+Legg til BikeBonk på urskiven for umiddelbar statusvisning. Støtter sirkulære, rektangulære, inline og hjørnekomplikasjoner.
+
+• Siri-talekommandoer
+Si bare «Sjekk sykler i BikeBonk» eller «Sykler montert i BikeBonk» for å sjekke eller oppdatere statusen uten å bruke hendene.
+
+• Snarveier-integrasjon
+Bygg kraftige automatiseringer med Snarveier-appen. For eksempel: «Når jeg åpner garasjen, minn meg på om syklene er montert.»
+
+• Fungerer offline
+All data lagres lokalt på enheten din. Ingen konto kreves, ingen data forlater enheten din.
+
+Perfekt for syklister, familier med sykkelstativ, og alle som har opplevd det hjertestoppende øyeblikket når de nesten kjørte inn i en lav åpning med sykler på taket.

@@ -1,0 +1,7 @@
+Nytt i BikeBonk:
+
+• Siri-talekommandoer - Si «Sjekk sykler i BikeBonk» eller «Sykler montert i BikeBonk»
+• Snarveier-integrasjon - Bygg automatiseringer med HomeKit og andre apper
+• Apple Watch-komplikasjoner - Se status på urskiven
+• Interaktive widgets - Endre status direkte fra hjemskjermen
+• Lokalisering - Nå tilgjengelig på norsk

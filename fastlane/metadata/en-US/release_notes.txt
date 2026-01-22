@@ -1,0 +1,7 @@
+What's New in BikeBonk:
+
+• Siri Voice Commands - Say "Check bikes in BikeBonk" or "Bikes mounted in BikeBonk"
+• Shortcuts Integration - Build automations with HomeKit and other apps
+• Apple Watch Complications - See status on your watch face
+• Interactive Widgets - Toggle status directly from your home screen
+• Localization - Now available in Norwegian
