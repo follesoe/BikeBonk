@@ -187,6 +187,17 @@ The app supports:
 
 Localization files are in `Shared/[lang].lproj/Localizable.strings` and shared across all targets.
 
+## Privacy Policy
+
+BikeBonk respects your privacy:
+
+- **No data collection** - The app does not collect, store, or transmit any personal data
+- **No analytics** - No tracking or analytics of any kind
+- **No network access** - All data is stored locally on your device using App Groups
+- **No account required** - The app works completely offline
+
+Your bike mount status never leaves your device.
+
 ## License
 
 MIT License - feel free to use this as a starting point for your own projects.
@@ -194,3 +205,8 @@ MIT License - feel free to use this as a starting point for your own projects.
 ## Contributing
 
 Contributions welcome! Please open an issue or submit a pull request.
+
+## Support
+
+- **Issues & Bugs**: [GitHub Issues](https://github.com/follesoe/BikeBonk/issues)
+- **Source Code**: [GitHub Repository](https://github.com/follesoe/BikeBonk)

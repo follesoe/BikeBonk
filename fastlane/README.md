@@ -17,7 +17,10 @@ fastlane/
     │   ├── description.txt       # Full description (4000 chars max)
     │   ├── keywords.txt          # Search keywords (100 chars max, comma-separated)
     │   ├── promotional_text.txt  # Promotional text (170 chars max)
-    │   └── release_notes.txt     # What's New (4000 chars max)
+    │   ├── release_notes.txt     # What's New (4000 chars max)
+    │   ├── privacy_url.txt       # Privacy policy URL
+    │   ├── support_url.txt       # Support URL
+    │   └── marketing_url.txt     # Marketing URL
     └── nb-NO/                    # Norwegian (Bokmål)
         └── ... (same files)
 ```
@@ -32,6 +35,9 @@ fastlane/
 | Promotional Text | 170 characters |
 | Description | 4000 characters |
 | Release Notes | 4000 characters |
+| Privacy URL | Valid URL |
+| Support URL | Valid URL |
+| Marketing URL | Valid URL |
 
 ## Quick Reference
 
@@ -105,17 +111,15 @@ Before each release, update the `release_notes.txt` files in both language folde
 - [App Store Connect](https://appstoreconnect.apple.com/)
 - [App Analytics](https://appstoreconnect.apple.com/analytics)
 
-## Additional Metadata Files (Optional)
+## URLs
 
-Fastlane supports additional files you can add:
+The following URLs are configured for both locales:
 
-```
-metadata/en-US/
-├── privacy_url.txt           # Privacy policy URL
-├── support_url.txt           # Support URL
-├── marketing_url.txt         # Marketing URL
-└── apple_tv_privacy_policy.txt
-```
+| Field | URL |
+|-------|-----|
+| Privacy Policy | https://github.com/follesoe/BikeBonk#privacy-policy |
+| Support | https://github.com/follesoe/BikeBonk/issues |
+| Marketing | https://github.com/follesoe/BikeBonk |
 
 ## Screenshots
 
