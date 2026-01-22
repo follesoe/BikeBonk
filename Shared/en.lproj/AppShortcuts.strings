@@ -3,14 +3,28 @@
 /* Check bikes phrases */
 "Check bikes in ${applicationName}" = "Check bikes in ${applicationName}";
 "Are bikes mounted in ${applicationName}" = "Are bikes mounted in ${applicationName}";
+"Bike status in ${applicationName}" = "Bike status in ${applicationName}";
+"Check roof in ${applicationName}" = "Check roof in ${applicationName}";
+"Bikes on roof in ${applicationName}" = "Bikes on roof in ${applicationName}";
 
 /* Mark mounted phrases */
 "Bikes mounted in ${applicationName}" = "Bikes mounted in ${applicationName}";
 "Mark bikes mounted in ${applicationName}" = "Mark bikes mounted in ${applicationName}";
+"Bikes added in ${applicationName}" = "Bikes added in ${applicationName}";
+"Bikes on in ${applicationName}" = "Bikes on in ${applicationName}";
+"Put bikes on in ${applicationName}" = "Put bikes on in ${applicationName}";
+"Loaded bikes in ${applicationName}" = "Loaded bikes in ${applicationName}";
 
 /* Mark removed phrases */
 "Bikes removed in ${applicationName}" = "Bikes removed in ${applicationName}";
 "Mark bikes removed in ${applicationName}" = "Mark bikes removed in ${applicationName}";
+"Bikes off in ${applicationName}" = "Bikes off in ${applicationName}";
+"Took bikes off in ${applicationName}" = "Took bikes off in ${applicationName}";
+"Unloaded bikes in ${applicationName}" = "Unloaded bikes in ${applicationName}";
+"No bikes in ${applicationName}" = "No bikes in ${applicationName}";
 
 /* Toggle phrases */
 "Toggle bikes in ${applicationName}" = "Toggle bikes in ${applicationName}";
+"Toggle in ${applicationName}" = "Toggle in ${applicationName}";
+"Switch bikes in ${applicationName}" = "Switch bikes in ${applicationName}";
+"Change bike status in ${applicationName}" = "Change bike status in ${applicationName}";

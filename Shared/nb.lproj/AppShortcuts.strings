@@ -2,15 +2,29 @@
 
 /* Check bikes phrases */
 "Check bikes in ${applicationName}" = "Sjekk sykler i ${applicationName}";
-"Are bikes mounted in ${applicationName}" = "Er syklene montert i ${applicationName}";
+"Are bikes mounted in ${applicationName}" = "Er syklene på i ${applicationName}";
+"Bike status in ${applicationName}" = "Status i ${applicationName}";
+"Check roof in ${applicationName}" = "Sjekk taket i ${applicationName}";
+"Bikes on roof in ${applicationName}" = "Sykler på taket i ${applicationName}";
 
 /* Mark mounted phrases */
-"Bikes mounted in ${applicationName}" = "Sykler montert i ${applicationName}";
+"Bikes mounted in ${applicationName}" = "Sykler i ${applicationName}";
 "Mark bikes mounted in ${applicationName}" = "Merk sykler montert i ${applicationName}";
+"Bikes added in ${applicationName}" = "Sykler lagt til i ${applicationName}";
+"Bikes on in ${applicationName}" = "Sykler på i ${applicationName}";
+"Put bikes on in ${applicationName}" = "Satt sykler på i ${applicationName}";
+"Loaded bikes in ${applicationName}" = "Lastet sykler i ${applicationName}";
 
 /* Mark removed phrases */
 "Bikes removed in ${applicationName}" = "Sykler fjernet i ${applicationName}";
 "Mark bikes removed in ${applicationName}" = "Merk sykler fjernet i ${applicationName}";
+"Bikes off in ${applicationName}" = "Sykler av i ${applicationName}";
+"Took bikes off in ${applicationName}" = "Tok av syklene i ${applicationName}";
+"Unloaded bikes in ${applicationName}" = "Lastet av sykler i ${applicationName}";
+"No bikes in ${applicationName}" = "Ingen sykler i ${applicationName}";
 
 /* Toggle phrases */
-"Toggle bikes in ${applicationName}" = "Bytt sykkelstatus i ${applicationName}";
+"Toggle bikes in ${applicationName}" = "Bytt sykler i ${applicationName}";
+"Toggle in ${applicationName}" = "Bytt i ${applicationName}";
+"Switch bikes in ${applicationName}" = "Switch sykler i ${applicationName}";
+"Change bike status in ${applicationName}" = "Endre status i ${applicationName}";

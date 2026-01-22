@@ -16,7 +16,10 @@ struct AppShortcuts: AppShortcutsProvider {
             intent: GetBikesMountedIntent(),
             phrases: [
                 "Check bikes in \(.applicationName)",
-                "Are bikes mounted in \(.applicationName)"
+                "Are bikes mounted in \(.applicationName)",
+                "Bike status in \(.applicationName)",
+                "Check roof in \(.applicationName)",
+                "Bikes on roof in \(.applicationName)"
             ],
             shortTitle: LocalizedStringResource("shortcut_check_title"),
             systemImageName: "bicycle"
@@ -27,7 +30,11 @@ struct AppShortcuts: AppShortcutsProvider {
             intent: MarkBikesMountedIntent(),
             phrases: [
                 "Bikes mounted in \(.applicationName)",
-                "Mark bikes mounted in \(.applicationName)"
+                "Mark bikes mounted in \(.applicationName)",
+                "Bikes added in \(.applicationName)",
+                "Bikes on in \(.applicationName)",
+                "Put bikes on in \(.applicationName)",
+                "Loaded bikes in \(.applicationName)"
             ],
             shortTitle: LocalizedStringResource("shortcut_mounted_title"),
             systemImageName: "bicycle"
@@ -38,7 +45,11 @@ struct AppShortcuts: AppShortcutsProvider {
             intent: MarkBikesRemovedIntent(),
             phrases: [
                 "Bikes removed in \(.applicationName)",
-                "Mark bikes removed in \(.applicationName)"
+                "Mark bikes removed in \(.applicationName)",
+                "Bikes off in \(.applicationName)",
+                "Took bikes off in \(.applicationName)",
+                "Unloaded bikes in \(.applicationName)",
+                "No bikes in \(.applicationName)"
             ],
             shortTitle: LocalizedStringResource("shortcut_removed_title"),
             systemImageName: "car"
@@ -48,7 +59,10 @@ struct AppShortcuts: AppShortcutsProvider {
         AppShortcut(
             intent: ToggleBikesIntent(),
             phrases: [
-                "Toggle bikes in \(.applicationName)"
+                "Toggle bikes in \(.applicationName)",
+                "Toggle in \(.applicationName)",
+                "Switch bikes in \(.applicationName)",
+                "Change bike status in \(.applicationName)"
             ],
             shortTitle: LocalizedStringResource("shortcut_toggle_title"),
             systemImageName: "arrow.triangle.2.circlepath"
