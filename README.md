@@ -7,6 +7,7 @@ A simple iOS app to help you remember when bikes are mounted on your car's roof 
 - **Bold Visual States** - Full-screen gradient UI makes status impossible to miss
   - Green = Safe (no bikes mounted)
   - Red/Orange = Warning (bikes are mounted)
+- **CarPlay Dashboard** - Widgets appear on your CarPlay dashboard, giving you a last-chance reminder before pulling into the garage
 - **iCloud Sync** - State syncs between iPhone and Apple Watch via iCloud
 - **Instant Sync** - Watch Connectivity provides instant sync when both apps are open
 - **Interactive Home Screen Widgets** - Toggle status directly from your home screen
@@ -21,17 +22,17 @@ A simple iOS app to help you remember when bikes are mounted on your car's roof 
 ### iOS App
 | Safe | Warning |
 |------|---------|
-| ![Safe](fastlane/screenshots/en-US/iPhone-17-Pro-1-safe.png) | ![Warning](fastlane/screenshots/en-US/iPhone-17-Pro-2-warning.png) |
+| ![Safe](fastlane/screenshots/en-US/iPhone-17-Pro-Max-1-safe.png) | ![Warning](fastlane/screenshots/en-US/iPhone-17-Pro-Max-2-warning.png) |
 
 ### watchOS App
 | Safe | Warning |
 |------|---------|
-| ![Safe](fastlane/screenshots/en-US/Apple-Watch-Series-11-(46mm)-1-safe.png) | ![Warning](fastlane/screenshots/en-US/Apple-Watch-Series-11-(46mm)-2-warning.png) |
+| ![Safe](fastlane/screenshots/en-US/Apple-Watch-Ultra-3-(49mm)-1-safe.png) | ![Warning](fastlane/screenshots/en-US/Apple-Watch-Ultra-3-(49mm)-2-warning.png) |
 
 ### iOS Widgets
 | Safe | Warning |
 |------|---------|
-| ![Safe](fastlane/screenshots/en-US/iPhone-17-Pro-3-widget-small-safe.png) | ![Warning](fastlane/screenshots/en-US/iPhone-17-Pro-4-widget-small-warning.png) |
+| ![Safe](fastlane/screenshots/en-US/iPhone-17-Pro-Max-3-widget-small-safe.png) | ![Warning](fastlane/screenshots/en-US/iPhone-17-Pro-Max-4-widget-small-warning.png) |
 
 ### watchOS Complications
 | Safe | Warning |
