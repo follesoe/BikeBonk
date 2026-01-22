@@ -11,53 +11,21 @@ struct ContentView: View {
     @State private var bikesMounted = BikeState.bikesMounted
     @Environment(\.scenePhase) private var scenePhase
 
-    private var backgroundGradient: LinearGradient {
-        bikesMounted ? Theme.Warning.gradient : Theme.Safe.gradient
-    }
-
     var body: some View {
         ZStack {
-            backgroundGradient
+            Theme.gradient(for: bikesMounted)
                 .ignoresSafeArea()
 
             VStack(spacing: 24) {
-                // Main icon with double-tap gesture
-                ZStack {
-                    if bikesMounted {
-                        Image(systemName: "bicycle")
-                            .font(.system(size: 120, weight: .medium))
-                            .foregroundColor(.white)
-                            .overlay(alignment: .topTrailing) {
-                                Image(systemName: "exclamationmark.triangle.fill")
-                                    .font(.system(size: 36, weight: .bold))
-                                    .foregroundColor(.white)
-                                    .offset(x: 20, y: -10)
-                            }
-                    } else {
-                        Image(systemName: "car.fill")
-                            .font(.system(size: 120, weight: .medium))
-                            .foregroundColor(.white)
-                            .overlay(alignment: .topTrailing) {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .font(.system(size: 36, weight: .bold))
-                                    .foregroundColor(.white)
-                                    .offset(x: 20, y: -10)
-                            }
+                StatusIconView(bikesMounted: bikesMounted, size: .iOS)
+                    .onTapGesture(count: 2) {
+                        bikesMounted.toggle()
                     }
-                }
-                .onTapGesture(count: 2) {
-                    bikesMounted.toggle()
-                }
-                .accessibilityHidden(true)
+                    .accessibilityHidden(true)
 
-                // Status text
-                Text(bikesMounted ? "bikes_status_mounted" : "bikes_status_not_mounted")
-                    .font(.system(size: 32, weight: .bold))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
+                StatusTextView(bikesMounted: bikesMounted)
                     .padding(.horizontal, 32)
 
-                // Toggle section
                 VStack(spacing: 12) {
                     Text("bikes_toggle_label")
                         .font(.subheadline)

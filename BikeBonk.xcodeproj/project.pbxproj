@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB12345A2F21700000DA7E16 /* BikeBonkWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC12340A2F21700000DA7E16 /* BikeBonkWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC1234012F21700000DA7E16 /* BikeBonkWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,13 @@
 			remoteGlobalIDString = BB12345F2F21700000DA7E16;
 			remoteInfo = BikeBonkWidgetExtension;
 		};
+		CC12340C2F21700000DA7E16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA27985E2F21697B00DA7E16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC1234062F21700000DA7E16;
+			remoteInfo = BikeBonkWatch;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +54,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC12340B2F21700000DA7E16 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CC12340A2F21700000DA7E16 /* BikeBonkWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +72,7 @@
 		AA2798732F21697D00DA7E16 /* BikeBonkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeBonkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA27987D2F21697D00DA7E16 /* BikeBonkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeBonkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeBonkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1234012F21700000DA7E16 /* BikeBonkWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeBonkWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -94,6 +114,11 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		CC1234022F21700000DA7E16 /* BikeBonkWatch */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BikeBonkWatch;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +150,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC1234032F21700000DA7E16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -134,6 +166,7 @@
 				AA2798682F21697B00DA7E16 /* BikeBonk */,
 				BB1234582F21700000DA7E16 /* Shared */,
 				BB1234572F21700000DA7E16 /* BikeBonkWidget */,
+				CC1234022F21700000DA7E16 /* BikeBonkWatch */,
 				AA2798762F21697D00DA7E16 /* BikeBonkTests */,
 				AA2798802F21697D00DA7E16 /* BikeBonkUITests */,
 				AA2798672F21697B00DA7E16 /* Products */,
@@ -147,6 +180,7 @@
 				AA2798732F21697D00DA7E16 /* BikeBonkTests.xctest */,
 				AA27987D2F21697D00DA7E16 /* BikeBonkUITests.xctest */,
 				BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */,
+				CC1234012F21700000DA7E16 /* BikeBonkWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,11 +196,13 @@
 				AA2798632F21697B00DA7E16 /* Frameworks */,
 				AA2798642F21697B00DA7E16 /* Resources */,
 				BB1234592F21700000DA7E16 /* Embed Foundation Extensions */,
+				CC12340B2F21700000DA7E16 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				BB1234602F21700000DA7E16 /* PBXTargetDependency */,
+				CC12340D2F21700000DA7E16 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AA2798682F21697B00DA7E16 /* BikeBonk */,
@@ -248,6 +284,29 @@
 			productReference = BB1234562F21700000DA7E16 /* BikeBonkWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		CC1234062F21700000DA7E16 /* BikeBonkWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1234072F21700000DA7E16 /* Build configuration list for PBXNativeTarget "BikeBonkWatch" */;
+			buildPhases = (
+				CC1234052F21700000DA7E16 /* Sources */,
+				CC1234032F21700000DA7E16 /* Frameworks */,
+				CC1234042F21700000DA7E16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BB1234582F21700000DA7E16 /* Shared */,
+				CC1234022F21700000DA7E16 /* BikeBonkWatch */,
+			);
+			name = BikeBonkWatch;
+			packageProductDependencies = (
+			);
+			productName = BikeBonkWatch;
+			productReference = CC1234012F21700000DA7E16 /* BikeBonkWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,6 +331,9 @@
 					BB12345F2F21700000DA7E16 = {
 						CreatedOnToolsVersion = 26.2;
 					};
+					CC1234062F21700000DA7E16 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = AA2798612F21697B00DA7E16 /* Build configuration list for PBXProject "BikeBonk" */;
@@ -293,6 +355,7 @@
 				AA2798722F21697D00DA7E16 /* BikeBonkTests */,
 				AA27987C2F21697D00DA7E16 /* BikeBonkUITests */,
 				BB12345F2F21700000DA7E16 /* BikeBonkWidgetExtension */,
+				CC1234062F21700000DA7E16 /* BikeBonkWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +383,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BB12345C2F21700000DA7E16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC1234042F21700000DA7E16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,6 +427,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC1234052F21700000DA7E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -374,6 +451,11 @@
 			isa = PBXTargetDependency;
 			target = BB12345F2F21700000DA7E16 /* BikeBonkWidgetExtension */;
 			targetProxy = BB12345E2F21700000DA7E16 /* PBXContainerItemProxy */;
+		};
+		CC12340D2F21700000DA7E16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC1234062F21700000DA7E16 /* BikeBonkWatch */;
+			targetProxy = CC12340C2F21700000DA7E16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -709,6 +791,72 @@
 			};
 			name = Release;
 		};
+		CC1234082F21700000DA7E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BikeBonkWatch/BikeBonkWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PT677XPRWH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BikeBonk;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = no.follesoe.BikeBonk;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		CC1234092F21700000DA7E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BikeBonkWatch/BikeBonkWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PT677XPRWH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BikeBonk;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = no.follesoe.BikeBonk;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -753,6 +901,15 @@
 			buildConfigurations = (
 				BB1234622F21700000DA7E16 /* Debug */,
 				BB1234632F21700000DA7E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1234072F21700000DA7E16 /* Build configuration list for PBXNativeTarget "BikeBonkWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC1234082F21700000DA7E16 /* Debug */,
+				CC1234092F21700000DA7E16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

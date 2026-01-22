@@ -57,13 +57,10 @@ struct BikeBonkWidgetEntryView: View {
 
     private var smallWidgetContent: some View {
         VStack(spacing: 8) {
-            iconView
-                .font(.system(size: 44, weight: .medium))
+            StatusIconView(bikesMounted: entry.bikesMounted, size: .widget)
 
-            Text(entry.bikesMounted ? "bikes_status_mounted" : "bikes_status_not_mounted")
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
+            StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 12)
+                .fontWeight(.semibold)
                 .lineLimit(2)
         }
         .padding()
@@ -71,39 +68,13 @@ struct BikeBonkWidgetEntryView: View {
 
     private var mediumWidgetContent: some View {
         HStack(spacing: 20) {
-            iconView
-                .font(.system(size: 64, weight: .medium))
+            StatusIconView(bikesMounted: entry.bikesMounted, size: .widgetMedium)
 
-            Text(entry.bikesMounted ? "bikes_status_mounted" : "bikes_status_not_mounted")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.white)
+            StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 18)
 
             Spacer()
         }
         .padding()
-    }
-
-    @ViewBuilder
-    private var iconView: some View {
-        if entry.bikesMounted {
-            Image(systemName: "bicycle")
-                .foregroundColor(.white)
-                .overlay(alignment: .topTrailing) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
-                        .offset(x: 8, y: -4)
-                }
-        } else {
-            Image(systemName: "car.fill")
-                .foregroundColor(.white)
-                .overlay(alignment: .topTrailing) {
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
-                        .offset(x: 8, y: -4)
-                }
-        }
     }
 }
 
@@ -116,7 +87,7 @@ struct BikeBonkWidget: Widget {
         StaticConfiguration(kind: kind, provider: BikeBonkProvider()) { entry in
             BikeBonkWidgetEntryView(entry: entry)
                 .containerBackground(for: .widget) {
-                    entry.bikesMounted ? Theme.Warning.gradient : Theme.Safe.gradient
+                    Theme.gradient(for: entry.bikesMounted)
                 }
                 .invalidatableContent()
         }
