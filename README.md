@@ -18,9 +18,25 @@ A simple iOS app to help you remember when bikes are mounted on your car's roof 
 
 ## Screenshots
 
-| iOS App | Widget | Watch App | Complication |
-|---------|--------|-----------|--------------|
-| Safe/Warning states | Small/Medium sizes | Toggle from wrist | Multiple styles |
+### iOS App
+| Safe | Warning |
+|------|---------|
+| ![Safe](fastlane/screenshots/en-US/iPhone-17-Pro-1-safe.png) | ![Warning](fastlane/screenshots/en-US/iPhone-17-Pro-2-warning.png) |
+
+### watchOS App
+| Safe | Warning |
+|------|---------|
+| ![Safe](fastlane/screenshots/en-US/Apple-Watch-Series-11-(46mm)-1-safe.png) | ![Warning](fastlane/screenshots/en-US/Apple-Watch-Series-11-(46mm)-2-warning.png) |
+
+### iOS Widgets
+| Safe | Warning |
+|------|---------|
+| ![Safe](fastlane/screenshots/en-US/iPhone-17-Pro-3-widget-small-safe.png) | ![Warning](fastlane/screenshots/en-US/iPhone-17-Pro-4-widget-small-warning.png) |
+
+### watchOS Complications
+| Safe | Warning |
+|------|---------|
+| ![Safe](fastlane/screenshots/en-US/Apple-Watch-Ultra-3-(49mm)-3-safe-widget.png) | ![Warning](fastlane/screenshots/en-US/Apple-Watch-Ultra-3-(49mm)-4-warning-widget.png) |
 
 ## Architecture
 
