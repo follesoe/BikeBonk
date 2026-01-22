@@ -25,6 +25,9 @@ enum Theme {
         static let icon = "bicycle"
         static let badgeIcon = "exclamationmark.triangle.fill"
         static let statusKey = "bikes_status_mounted"
+
+        /// System sound ID for warning feedback (1103 = Tock)
+        static let soundID: UInt32 = 1103
     }
 
     /// Safe state when no bikes are mounted.
@@ -42,6 +45,9 @@ enum Theme {
         static let icon = "car.fill"
         static let badgeIcon = "checkmark.circle.fill"
         static let statusKey = "bikes_status_not_mounted"
+
+        /// System sound ID for success feedback (1057 = Tink)
+        static let soundID: UInt32 = 1057
     }
 
     /// Returns the appropriate gradient for the current state.

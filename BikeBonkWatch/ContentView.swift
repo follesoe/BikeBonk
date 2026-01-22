@@ -27,6 +27,7 @@ struct ContentView: View {
         .ignoresSafeArea()
         .onChange(of: bikesMounted) { _, newValue in
             BikeState.bikesMounted = newValue
+            Feedback.play(forMountedState: newValue)
         }
         .onAppear {
             bikesMounted = BikeState.bikesMounted

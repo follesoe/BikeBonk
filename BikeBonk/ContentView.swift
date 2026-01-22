@@ -44,6 +44,7 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.3), value: bikesMounted)
         .onChange(of: bikesMounted) { _, newValue in
             BikeState.bikesMounted = newValue
+            Feedback.play(forMountedState: newValue)
         }
         .onAppear {
             bikesMounted = BikeState.bikesMounted
