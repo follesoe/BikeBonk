@@ -8,23 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var bikesMounted = BikeState.bikesMounted
     @Environment(\.scenePhase) private var scenePhase
-    @StateObject private var syncManager = iCloudSyncManager.shared
+    @StateObject private var sync = SyncManager.shared
+
+    /// Binding that syncs toggle changes through SyncManager.
+    private var bikesMountedBinding: Binding<Bool> {
+        Binding(
+            get: { sync.bikesMounted },
+            set: { newValue in
+                sync.setBikesMounted(newValue)
+                Feedback.play(forMountedState: newValue)
+            }
+        )
+    }
 
     var body: some View {
         ZStack {
-            Theme.gradient(for: bikesMounted)
+            Theme.gradient(for: sync.bikesMounted)
                 .ignoresSafeArea()
 
             VStack(spacing: 24) {
-                StatusIconView(bikesMounted: bikesMounted, size: .iOS)
+                StatusIconView(bikesMounted: sync.bikesMounted, size: .iOS)
                     .onTapGesture(count: 2) {
-                        bikesMounted.toggle()
+                        sync.setBikesMounted(!sync.bikesMounted)
+                        Feedback.play(forMountedState: sync.bikesMounted)
                     }
                     .accessibilityHidden(true)
 
-                StatusTextView(bikesMounted: bikesMounted)
+                StatusTextView(bikesMounted: sync.bikesMounted)
                     .padding(.horizontal, 32)
 
                 VStack(spacing: 12) {
@@ -32,7 +43,7 @@ struct ContentView: View {
                         .font(.subheadline)
                         .foregroundColor(.white.opacity(0.8))
 
-                    Toggle("", isOn: $bikesMounted)
+                    Toggle("", isOn: bikesMountedBinding)
                         .toggleStyle(.switch)
                         .labelsHidden()
                         .scaleEffect(1.3)
@@ -42,25 +53,10 @@ struct ContentView: View {
             }
             .padding()
         }
-        .animation(.easeInOut(duration: 0.3), value: bikesMounted)
-        .onChange(of: bikesMounted) { _, newValue in
-            BikeState.bikesMounted = newValue
-            Feedback.play(forMountedState: newValue)
-        }
-        .onAppear {
-            bikesMounted = BikeState.bikesMounted
-        }
+        .animation(.easeInOut(duration: 0.3), value: sync.bikesMounted)
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
-                // Refresh from iCloud when app becomes active
-                syncManager.refresh()
-                bikesMounted = BikeState.bikesMounted
-            }
-        }
-        .onChange(of: syncManager.bikesMounted) { _, newValue in
-            // Update UI when iCloud sync receives external changes
-            if newValue != bikesMounted {
-                bikesMounted = newValue
+                sync.refresh()
             }
         }
         .preferredColorScheme(.dark)

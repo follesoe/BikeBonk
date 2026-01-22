@@ -8,43 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var bikesMounted = BikeState.bikesMounted
     @Environment(\.scenePhase) private var scenePhase
-    @StateObject private var syncManager = iCloudSyncManager.shared
+    @StateObject private var sync = SyncManager.shared
 
     var body: some View {
         Button(action: {
-            bikesMounted.toggle()
+            sync.setBikesMounted(!sync.bikesMounted)
+            Feedback.play(forMountedState: sync.bikesMounted)
         }) {
             VStack(spacing: 8) {
-                StatusIconView(bikesMounted: bikesMounted, size: .watch)
+                StatusIconView(bikesMounted: sync.bikesMounted, size: .watch)
 
-                StatusTextView(bikesMounted: bikesMounted, fontSize: 14)
+                StatusTextView(bikesMounted: sync.bikesMounted, fontSize: 14)
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Theme.gradient(for: bikesMounted))
+            .background(Theme.gradient(for: sync.bikesMounted))
         }
         .buttonStyle(.plain)
         .ignoresSafeArea()
-        .onChange(of: bikesMounted) { _, newValue in
-            BikeState.bikesMounted = newValue
-            Feedback.play(forMountedState: newValue)
-        }
-        .onAppear {
-            bikesMounted = BikeState.bikesMounted
-        }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
-                // Refresh from iCloud when app becomes active
-                syncManager.refresh()
-                bikesMounted = BikeState.bikesMounted
-            }
-        }
-        .onChange(of: syncManager.bikesMounted) { _, newValue in
-            // Update UI when iCloud sync receives external changes
-            if newValue != bikesMounted {
-                bikesMounted = newValue
+                sync.refresh()
             }
         }
     }

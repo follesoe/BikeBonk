@@ -19,19 +19,47 @@ struct BikeBonkEntry: TimelineEntry {
 // MARK: - Timeline Provider
 
 struct BikeBonkProvider: TimelineProvider {
+    /// Refresh interval for checking iCloud updates (10 minutes)
+    private let refreshInterval: TimeInterval = 10 * 60
+
     func placeholder(in context: Context) -> BikeBonkEntry {
         BikeBonkEntry(date: .now, bikesMounted: false)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (BikeBonkEntry) -> Void) {
-        let entry = BikeBonkEntry(date: .now, bikesMounted: BikeState.bikesMounted)
+        let entry = BikeBonkEntry(date: .now, bikesMounted: currentState())
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<BikeBonkEntry>) -> Void) {
-        let entry = BikeBonkEntry(date: .now, bikesMounted: BikeState.bikesMounted)
-        let timeline = Timeline(entries: [entry], policy: .never)
+        let entry = BikeBonkEntry(date: .now, bikesMounted: currentState())
+        let nextRefresh = Date().addingTimeInterval(refreshInterval)
+        let timeline = Timeline(entries: [entry], policy: .after(nextRefresh))
         completion(timeline)
+    }
+
+    /// Gets current state, checking iCloud for cross-device updates.
+    private func currentState() -> Bool {
+        // If local was just updated (same-device), trust local
+        // iCloud sync is async so it may have stale data
+        if BikeState.wasRecentlyUpdatedLocally {
+            return BikeState.bikesMounted
+        }
+
+        // For periodic refresh, check iCloud for cross-device updates
+        let iCloud = NSUbiquitousKeyValueStore.default
+        iCloud.synchronize()
+
+        let iCloudValue = iCloud.bool(forKey: BikeState.bikesMountedKey)
+        let localValue = BikeState.bikesMounted
+
+        // If iCloud differs, it's a cross-device update - prefer iCloud
+        if iCloudValue != localValue {
+            BikeState.shared.set(iCloudValue, forKey: BikeState.bikesMountedKey)
+            return iCloudValue
+        }
+
+        return localValue
     }
 }
 

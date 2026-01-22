@@ -13,6 +13,7 @@ import WidgetKit
 struct BikeState {
     static let appGroupID = "group.no.follesoe.BikeBonk.shared"
     static let bikesMountedKey = "bikesMounted"
+    static let lastUpdatedKey = "bikesMountedLastUpdated"
 
     /// Shared UserDefaults instance using App Groups (local cache).
     static var shared: UserDefaults {
@@ -29,14 +30,22 @@ struct BikeState {
     static var bikesMounted: Bool {
         get { shared.bool(forKey: bikesMountedKey) }
         set {
-            // Write to local cache
+            // Write to local cache with timestamp
             shared.set(newValue, forKey: bikesMountedKey)
+            shared.set(Date().timeIntervalSince1970, forKey: lastUpdatedKey)
             // Write to iCloud
             iCloud.set(newValue, forKey: bikesMountedKey)
             iCloud.synchronize()
             // Reload widget timelines when state changes
             WidgetCenter.shared.reloadAllTimelines()
         }
+    }
+
+    /// Returns true if local cache was updated within the last few seconds.
+    static var wasRecentlyUpdatedLocally: Bool {
+        let lastUpdated = shared.double(forKey: lastUpdatedKey)
+        let elapsed = Date().timeIntervalSince1970 - lastUpdated
+        return elapsed < 5.0  // Within last 5 seconds
     }
 
     /// Toggles the bikes mounted state and reloads widgets.
