@@ -13,6 +13,7 @@ struct ToggleBikesIntent: AppIntent {
     static var title: LocalizedStringResource = "Toggle Bikes"
     static var description = IntentDescription("Toggle whether bikes are mounted on the roof")
 
+    @MainActor
     func perform() async throws -> some IntentResult {
         BikeState.toggle()
         return .result()

@@ -2,3 +2,12 @@
 "bikes_status_mounted" = "Bikes are mounted";
 "bikes_status_not_mounted" = "No bikes on the roof";
 "bikes_toggle_label" = "Bikes mounted on roof";
+
+/* Complication strings */
+"complication_description" = "Toggle bike mount status";
+"complication_status_mounted" = "Mounted";
+"complication_status_clear" = "Clear";
+"complication_inline_mounted" = "Bikes Mounted";
+"complication_inline_clear" = "Roof Clear";
+"complication_corner_mounted" = "Bikes";
+"complication_corner_clear" = "Clear";

@@ -2,3 +2,12 @@
 "bikes_status_mounted" = "Syklene er montert";
 "bikes_status_not_mounted" = "Ingen sykler på taket";
 "bikes_toggle_label" = "Sykler montert på taket";
+
+/* Complication strings */
+"complication_description" = "Endre sykkelstatus";
+"complication_status_mounted" = "Montert";
+"complication_status_clear" = "Klart";
+"complication_inline_mounted" = "Sykler montert";
+"complication_inline_clear" = "Taket klart";
+"complication_corner_mounted" = "Sykler";
+"complication_corner_clear" = "Klart";
