@@ -11,7 +11,7 @@ import WidgetKit
 /// Shared state manager for bike-mounted status.
 /// Uses App Groups to share data between the main app and widgets.
 struct BikeState {
-    static let appGroupID = "group.no.follesoe.BikeBonk"
+    static let appGroupID = "group.no.follesoe.BikeBonk.shared"
     static let bikesMountedKey = "bikesMounted"
 
     /// Shared UserDefaults instance using App Groups.

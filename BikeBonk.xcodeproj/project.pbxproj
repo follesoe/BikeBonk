@@ -681,20 +681,22 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonk/BikeBonk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIViewControllerBasedStatusBarAppearance = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -714,20 +716,22 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonk/BikeBonk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIViewControllerBasedStatusBarAppearance = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -745,11 +749,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -767,11 +771,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -788,10 +792,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -808,10 +812,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -831,7 +835,7 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonkWidget/BikeBonkWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BikeBonkWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BikeBonkWidget;
@@ -842,7 +846,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.BikeBonkWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp.BikeBonkWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -861,7 +865,7 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonkWidget/BikeBonkWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BikeBonkWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BikeBonkWidget;
@@ -872,7 +876,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.BikeBonkWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp.BikeBonkWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -891,19 +895,19 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonkWatch/BikeBonkWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BikeBonk;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = no.follesoe.BikeBonk;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = no.follesoe.BikeBonkApp;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -924,19 +928,19 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonkWatch/BikeBonkWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BikeBonk;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = no.follesoe.BikeBonk;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = no.follesoe.BikeBonkApp;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -956,7 +960,7 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonkWatchWidget/BikeBonkWatchWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BikeBonkWatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BikeBonkWidget;
@@ -967,7 +971,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.watchkitapp.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp.watchkitapp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -987,7 +991,7 @@
 				CODE_SIGN_ENTITLEMENTS = BikeBonkWatchWidget/BikeBonkWatchWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PT677XPRWH;
+				DEVELOPMENT_TEAM = 8R63YD87KZ;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BikeBonkWatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BikeBonkWidget;
@@ -998,7 +1002,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonk.watchkitapp.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = no.follesoe.BikeBonkApp.watchkitapp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
