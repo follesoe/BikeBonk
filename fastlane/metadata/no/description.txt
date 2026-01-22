@@ -8,7 +8,10 @@ FUNKSJONER
 Fullskjerms fargekodede visning gjør statusen umulig å overse. Grønn betyr trygt, rød/oransje betyr at syklene er montert.
 
 • Widgets på hjemskjermen
-Legg til interaktive widgets på hjemskjermen. Se statusen med et blikk og endre den med ett trykk.
+Legg til interaktive widgets på hjemskjermen. Se statusen med et blikk og endre den med ett trykk. Widgets vises også i CarPlay, slik at du får en tydelig påminnelse rett på bilens dashbord når du begynner å kjøre.
+
+• CarPlay-integrasjon
+BikeBonk-widgeten din vises i CarPlay, så du ser sykkelstatusen i det øyeblikket du kobler iPhone til bilen. En perfekt siste-sjanse-påminnelse før du kjører inn i garasjen.
 
 • Apple Watch-app
 Sjekk og endre sykkelstatusen din rett fra håndleddet. Perfekt når du laster eller losser sykler.
@@ -16,13 +19,16 @@ Sjekk og endre sykkelstatusen din rett fra håndleddet. Perfekt når du laster e
 • Komplikasjoner på klokken
 Legg til BikeBonk på urskiven for umiddelbar statusvisning. Støtter sirkulære, rektangulære, inline og hjørnekomplikasjoner.
 
+• iCloud-synkronisering
+Sykkelstatusen din synkroniseres automatisk mellom iPhone og Apple Watch via iCloud. Endre statusen på én enhet og se den oppdateres overalt.
+
 • Siri-talekommandoer
 Si bare «Sjekk sykler i BikeBonk» eller «Sykler montert i BikeBonk» for å sjekke eller oppdatere statusen uten å bruke hendene.
 
 • Snarveier-integrasjon
 Bygg kraftige automatiseringer med Snarveier-appen. For eksempel: «Når jeg åpner garasjen, minn meg på om syklene er montert.»
 
-• Fungerer offline
-All data lagres lokalt på enheten din. Ingen konto kreves, ingen data forlater enheten din.
+• Personvernfokusert
+All data synkroniseres gjennom din personlige iCloud-konto. Ingen tredjepartsservere, ingen sporing, ingen konto kreves.
 
 Perfekt for syklister, familier med sykkelstativ, og alle som har opplevd det hjertestoppende øyeblikket når de nesten kjørte inn i en lav åpning med sykler på taket.
