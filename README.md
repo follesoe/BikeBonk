@@ -10,6 +10,8 @@ A simple iOS app to help you remember when bikes are mounted on your car's roof 
 - **Interactive Home Screen Widgets** - Toggle status directly from your home screen
 - **watchOS App** - Quick access from your Apple Watch
 - **Watch Complications** - See and toggle status from any watch face
+- **Siri Voice Commands** - "Check bikes in BikeBonk" on iPhone or Apple Watch
+- **Shortcuts Integration** - Build automations with HomeKit and other apps
 - **Localization** - English and Norwegian support
 
 ## Screenshots
@@ -38,8 +40,13 @@ BikeBonk/
     ├── Theme.swift            # Colors, gradients, icons
     ├── StatusIconView.swift   # Reusable icon component
     ├── ToggleBikesIntent.swift # AppIntent for interactive widgets
+    ├── SetBikesMountedIntent.swift  # AppIntent for setting state
+    ├── GetBikesMountedIntent.swift  # AppIntent for checking state
+    ├── AppShortcuts.swift     # Siri phrase definitions
     ├── Color+Hex.swift        # Hex color extension
     └── [en|nb].lproj/         # Localization files
+        ├── Localizable.strings    # UI strings
+        └── AppShortcuts.strings   # Siri phrases
 ```
 
 ## Key Concepts
@@ -77,6 +84,44 @@ struct ToggleBikesIntent: AppIntent {
     }
 }
 ```
+
+### Siri & Shortcuts Integration
+
+The app provides App Intents for Siri voice commands and Shortcuts automations:
+
+**Voice Commands (English):**
+| Command | Phrase |
+|---------|--------|
+| Check status | "Check bikes in BikeBonk" |
+| Mark mounted | "Bikes mounted in BikeBonk" |
+| Mark removed | "Bikes removed in BikeBonk" |
+| Toggle | "Toggle bikes in BikeBonk" |
+
+**Voice Commands (Norwegian):**
+| Command | Phrase |
+|---------|--------|
+| Check status | "Sjekk sykler i BikeBonk" |
+| Mark mounted | "Sykler montert i BikeBonk" |
+| Mark removed | "Sykler fjernet i BikeBonk" |
+
+**Shortcuts Automation Example:**
+
+Use `GetBikesMountedIntent` in Shortcuts to build automations:
+- "When I open my garage with HomeKit, check if bikes are mounted, and send a notification if true"
+
+```swift
+struct GetBikesMountedIntent: AppIntent {
+    static var title: LocalizedStringResource = "intent_check_title"
+
+    @MainActor
+    func perform() async throws -> some IntentResult & ReturnsValue<Bool> & ProvidesDialog {
+        let mounted = BikeState.bikesMounted
+        return .result(value: mounted, dialog: ...)
+    }
+}
+```
+
+The `ReturnsValue<Bool>` protocol exposes the state to Shortcuts for use in conditional automations.
 
 ### Theming System
 
