@@ -8,6 +8,7 @@
 # Build
 build/
 DerivedData/
+.screenshots-derived-data/
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -22,7 +23,6 @@ Pods/
 # Fastlane
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
 
 # OS
 .DS_Store
