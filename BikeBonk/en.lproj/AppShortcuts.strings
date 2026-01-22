@@ -1,0 +1,16 @@
+/* App Shortcut Phrases - English */
+
+/* Check bikes phrases */
+"Check bikes in ${applicationName}" = "Check bikes in ${applicationName}";
+"Are bikes mounted in ${applicationName}" = "Are bikes mounted in ${applicationName}";
+
+/* Mark mounted phrases */
+"Bikes mounted in ${applicationName}" = "Bikes mounted in ${applicationName}";
+"Mark bikes mounted in ${applicationName}" = "Mark bikes mounted in ${applicationName}";
+
+/* Mark removed phrases */
+"Bikes removed in ${applicationName}" = "Bikes removed in ${applicationName}";
+"Mark bikes removed in ${applicationName}" = "Mark bikes removed in ${applicationName}";
+
+/* Toggle phrases */
+"Toggle bikes in ${applicationName}" = "Toggle bikes in ${applicationName}";

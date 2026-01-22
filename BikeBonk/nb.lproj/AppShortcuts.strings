@@ -1,0 +1,16 @@
+/* App Shortcut Phrases - Norwegian */
+
+/* Check bikes phrases */
+"Check bikes in ${applicationName}" = "Sjekk sykler i ${applicationName}";
+"Are bikes mounted in ${applicationName}" = "Er syklene montert i ${applicationName}";
+
+/* Mark mounted phrases */
+"Bikes mounted in ${applicationName}" = "Sykler montert i ${applicationName}";
+"Mark bikes mounted in ${applicationName}" = "Merk sykler montert i ${applicationName}";
+
+/* Mark removed phrases */
+"Bikes removed in ${applicationName}" = "Sykler fjernet i ${applicationName}";
+"Mark bikes removed in ${applicationName}" = "Merk sykler fjernet i ${applicationName}";
+
+/* Toggle phrases */
+"Toggle bikes in ${applicationName}" = "Bytt sykkelstatus i ${applicationName}";

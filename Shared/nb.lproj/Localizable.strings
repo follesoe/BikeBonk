@@ -11,3 +11,28 @@
 "complication_inline_clear" = "Taket klart";
 "complication_corner_mounted" = "Sykler";
 "complication_corner_clear" = "Klart";
+
+/* Siri response strings */
+"siri_response_mounted" = "Ja, syklene er montert på taket. Vær forsiktig!";
+"siri_response_not_mounted" = "Nei, det er ingen sykler på taket. Alt er klart!";
+
+/* Intent titles and descriptions */
+"intent_toggle_title" = "Bytt sykkelstatus";
+"intent_toggle_description" = "Bytt om syklene er montert på taket";
+"intent_set_title" = "Sett sykkelstatus";
+"intent_set_description" = "Angi om syklene er montert på taket";
+"intent_set_summary" = "Sett sykler montert til";
+"intent_param_mounted" = "Montert";
+"intent_param_mounted_description" = "Om syklene er montert på taket";
+"intent_mark_mounted_title" = "Merk sykler som montert";
+"intent_mark_mounted_description" = "Merk at syklene er montert på taket";
+"intent_mark_removed_title" = "Merk sykler som fjernet";
+"intent_mark_removed_description" = "Merk at syklene er fjernet fra taket";
+"intent_check_title" = "Sjekk sykler";
+"intent_check_description" = "Sjekk om syklene er montert på taket";
+
+/* App Shortcut titles */
+"shortcut_check_title" = "Sjekk sykler";
+"shortcut_mounted_title" = "Sykler montert";
+"shortcut_removed_title" = "Sykler fjernet";
+"shortcut_toggle_title" = "Bytt sykkelstatus";

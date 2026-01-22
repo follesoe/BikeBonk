@@ -11,3 +11,28 @@
 "complication_inline_clear" = "Roof Clear";
 "complication_corner_mounted" = "Bikes";
 "complication_corner_clear" = "Clear";
+
+/* Siri response strings */
+"siri_response_mounted" = "Yes, bikes are mounted on the roof. Be careful!";
+"siri_response_not_mounted" = "No, there are no bikes on the roof. You're good to go!";
+
+/* Intent titles and descriptions */
+"intent_toggle_title" = "Toggle Bikes";
+"intent_toggle_description" = "Toggle whether bikes are mounted on the roof";
+"intent_set_title" = "Set Bikes Mounted";
+"intent_set_description" = "Set whether bikes are mounted on the roof";
+"intent_set_summary" = "Set bikes mounted to";
+"intent_param_mounted" = "Mounted";
+"intent_param_mounted_description" = "Whether bikes are mounted on the roof";
+"intent_mark_mounted_title" = "Mark Bikes as Mounted";
+"intent_mark_mounted_description" = "Mark that bikes are mounted on the roof";
+"intent_mark_removed_title" = "Mark Bikes as Removed";
+"intent_mark_removed_description" = "Mark that bikes have been removed from the roof";
+"intent_check_title" = "Check Bikes";
+"intent_check_description" = "Check whether bikes are mounted on the roof";
+
+/* App Shortcut titles */
+"shortcut_check_title" = "Check Bikes";
+"shortcut_mounted_title" = "Bikes Mounted";
+"shortcut_removed_title" = "Bikes Removed";
+"shortcut_toggle_title" = "Toggle Bikes";
