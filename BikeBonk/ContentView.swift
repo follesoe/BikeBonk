@@ -54,6 +54,7 @@ struct ContentView: View {
                 bikesMounted = BikeState.bikesMounted
             }
         }
+        .preferredColorScheme(.dark)
     }
 }
 #Preview("Safe State") {

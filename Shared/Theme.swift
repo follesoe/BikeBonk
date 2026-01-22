@@ -12,9 +12,9 @@ enum Theme {
 
     /// Warning state when bikes are mounted on the roof.
     enum Warning {
-        static let gradientStart = Color(hex: "FF2D20")
-        static let gradientMiddle = Color(hex: "FF5733")
-        static let gradientEnd = Color(hex: "FF8C42")
+        static let gradientStart = Color(hex: "C41E3A")
+        static let gradientMiddle = Color(hex: "DC3545")
+        static let gradientEnd = Color(hex: "FA3C52")
 
         static let gradient = LinearGradient(
             colors: [gradientStart, gradientMiddle, gradientEnd],
@@ -26,15 +26,15 @@ enum Theme {
         static let badgeIcon = "exclamationmark.triangle.fill"
         static let statusKey = "bikes_status_mounted"
 
-        /// System sound ID for warning feedback (1103 = Tock)
-        static let soundID: UInt32 = 1103
+        /// System sound ID for warning feedback (1305 = lock)
+        static let soundID: UInt32 = 1305
     }
 
     /// Safe state when no bikes are mounted.
     enum Safe {
-        static let gradientStart = Color(hex: "34C759")
-        static let gradientMiddle = Color(hex: "30D158")
-        static let gradientEnd = Color(hex: "30B350")
+        static let gradientStart = Color(hex: "30D158")
+        static let gradientMiddle = Color(hex: "32D74B")
+        static let gradientEnd = Color(hex: "34C759")
 
         static let gradient = LinearGradient(
             colors: [gradientStart, gradientMiddle, gradientEnd],
@@ -46,8 +46,8 @@ enum Theme {
         static let badgeIcon = "checkmark.circle.fill"
         static let statusKey = "bikes_status_not_mounted"
 
-        /// System sound ID for success feedback (1057 = Tink)
-        static let soundID: UInt32 = 1057
+        /// System sound ID for success feedback (1305 = lock)
+        static let soundID: UInt32 = 1305
     }
 
     /// Returns the appropriate gradient for the current state.
