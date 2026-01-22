@@ -55,9 +55,13 @@ final class SyncManager: NSObject, ObservableObject {
         let iCloudValue = NSUbiquitousKeyValueStore.default.bool(forKey: stateKey)
         let localValue = BikeState.bikesMounted
 
-        // Prefer iCloud value if different (it's the cross-device source of truth)
-        if iCloudValue != localValue {
+        // Prefer iCloud value if different, but only if local value wasn't recently updated
+        // This prevents race conditions where iCloud sync is slower than Watch Connectivity
+        if iCloudValue != localValue && !BikeState.wasRecentlyUpdatedLocally {
             BikeState.shared.set(iCloudValue, forKey: stateKey)
+            BikeState.shared.set(Date().timeIntervalSince1970, forKey: BikeState.lastUpdatedKey)
+            NSUbiquitousKeyValueStore.default.set(iCloudValue, forKey: stateKey)
+            NSUbiquitousKeyValueStore.default.synchronize()
             WidgetCenter.shared.reloadAllTimelines()
         }
 
@@ -123,8 +127,14 @@ final class SyncManager: NSObject, ObservableObject {
     private func applyReceivedState(_ newValue: Bool) {
         guard newValue != bikesMounted else { return }
 
-        // Update local cache
+        // Update local cache with timestamp
         BikeState.shared.set(newValue, forKey: stateKey)
+        BikeState.shared.set(Date().timeIntervalSince1970, forKey: BikeState.lastUpdatedKey)
+
+        // Also update iCloud to keep both storage locations in sync
+        // This prevents stale iCloud values from overwriting correct local values
+        NSUbiquitousKeyValueStore.default.set(newValue, forKey: stateKey)
+        NSUbiquitousKeyValueStore.default.synchronize()
 
         // Reload widgets/complications
         WidgetCenter.shared.reloadAllTimelines()
