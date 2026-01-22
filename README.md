@@ -143,19 +143,20 @@ struct ToggleBikesIntent: AppIntent {
 The app provides App Intents for Siri voice commands and Shortcuts automations:
 
 **Voice Commands (English):**
-| Command | Phrase |
-|---------|--------|
-| Check status | "Check bikes in BikeBonk" |
-| Mark mounted | "Bikes mounted in BikeBonk" |
-| Mark removed | "Bikes removed in BikeBonk" |
-| Toggle | "Toggle bikes in BikeBonk" |
+| Command | Phrases |
+|---------|---------|
+| Check status | "What's the status in BikeBonk", "Check bikes in BikeBonk", "Bike status in BikeBonk" |
+| Mark mounted | "Bikes mounted in BikeBonk", "Bikes on in BikeBonk", "Loaded bikes in BikeBonk" |
+| Mark removed | "Bikes removed in BikeBonk", "Bikes off in BikeBonk", "No bikes in BikeBonk" |
+| Toggle | "Change status in BikeBonk", "Toggle in BikeBonk", "Switch bikes in BikeBonk" |
 
 **Voice Commands (Norwegian):**
-| Command | Phrase |
-|---------|--------|
-| Check status | "Sjekk sykler i BikeBonk" |
-| Mark mounted | "Sykler montert i BikeBonk" |
-| Mark removed | "Sykler fjernet i BikeBonk" |
+| Command | Phrases |
+|---------|---------|
+| Check status | "Hva er statusen i BikeBonk", "Sjekk sykler i BikeBonk", "Status i BikeBonk" |
+| Mark mounted | "Sykler montert i BikeBonk", "Sykler på i BikeBonk", "Lastet sykler i BikeBonk" |
+| Mark removed | "Sykler fjernet i BikeBonk", "Sykler av i BikeBonk", "Ingen sykler i BikeBonk" |
+| Toggle | "Endre i BikeBonk", "Bytt i BikeBonk", "Endre status i BikeBonk" |
 
 **Shortcuts Automation Example:**
 

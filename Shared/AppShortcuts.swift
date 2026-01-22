@@ -19,7 +19,8 @@ struct AppShortcuts: AppShortcutsProvider {
                 "Are bikes mounted in \(.applicationName)",
                 "Bike status in \(.applicationName)",
                 "Check roof in \(.applicationName)",
-                "Bikes on roof in \(.applicationName)"
+                "Bikes on roof in \(.applicationName)",
+                "What's the status in \(.applicationName)"
             ],
             shortTitle: LocalizedStringResource("shortcut_check_title"),
             systemImageName: "bicycle"
@@ -62,7 +63,8 @@ struct AppShortcuts: AppShortcutsProvider {
                 "Toggle bikes in \(.applicationName)",
                 "Toggle in \(.applicationName)",
                 "Switch bikes in \(.applicationName)",
-                "Change bike status in \(.applicationName)"
+                "Change bike status in \(.applicationName)",
+                "Change status in \(.applicationName)"
             ],
             shortTitle: LocalizedStringResource("shortcut_toggle_title"),
             systemImageName: "arrow.triangle.2.circlepath"

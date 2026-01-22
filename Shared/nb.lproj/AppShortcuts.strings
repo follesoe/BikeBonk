@@ -6,6 +6,7 @@
 "Bike status in ${applicationName}" = "Status i ${applicationName}";
 "Check roof in ${applicationName}" = "Sjekk taket i ${applicationName}";
 "Bikes on roof in ${applicationName}" = "Sykler på taket i ${applicationName}";
+"What's the status in ${applicationName}" = "Hva er statusen i ${applicationName}";
 
 /* Mark mounted phrases */
 "Bikes mounted in ${applicationName}" = "Sykler i ${applicationName}";
@@ -28,3 +29,4 @@
 "Toggle in ${applicationName}" = "Bytt i ${applicationName}";
 "Switch bikes in ${applicationName}" = "Switch sykler i ${applicationName}";
 "Change bike status in ${applicationName}" = "Endre status i ${applicationName}";
+"Change status in ${applicationName}" = "Endre i ${applicationName}";
