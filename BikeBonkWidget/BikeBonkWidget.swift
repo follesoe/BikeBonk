@@ -68,6 +68,13 @@ struct BikeBonkProvider: TimelineProvider {
 struct BikeBonkWidgetEntryView: View {
     var entry: BikeBonkEntry
     @Environment(\.widgetFamily) var family
+    @Environment(\.widgetContentMargins) var margins
+    @Environment(\.showsWidgetContainerBackground) var showsBackground
+
+    /// Whether widget is displayed in StandBy or CarPlay (larger, no background)
+    private var isStandByOrCarPlay: Bool {
+        !showsBackground
+    }
 
     var body: some View {
         Button(intent: ToggleBikesIntent()) {
@@ -76,6 +83,10 @@ struct BikeBonkWidgetEntryView: View {
                 smallWidgetContent
             case .systemMedium:
                 mediumWidgetContent
+            case .accessoryCircular:
+                accessoryCircularContent
+            case .accessoryRectangular:
+                accessoryRectangularContent
             default:
                 smallWidgetContent
             }
@@ -84,12 +95,18 @@ struct BikeBonkWidgetEntryView: View {
     }
 
     private var smallWidgetContent: some View {
-        VStack(spacing: 8) {
-            StatusIconView(bikesMounted: entry.bikesMounted, size: .widget)
+        VStack(spacing: isStandByOrCarPlay ? 12 : 8) {
+            StatusIconView(
+                bikesMounted: entry.bikesMounted,
+                size: isStandByOrCarPlay ? .widgetMedium : .widget
+            )
 
-            StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 12)
-                .fontWeight(.semibold)
-                .lineLimit(2)
+            StatusTextView(
+                bikesMounted: entry.bikesMounted,
+                fontSize: isStandByOrCarPlay ? 18 : 12
+            )
+            .fontWeight(.semibold)
+            .lineLimit(2)
         }
         .padding()
     }
@@ -103,6 +120,28 @@ struct BikeBonkWidgetEntryView: View {
             Spacer()
         }
         .padding()
+    }
+
+    private var accessoryCircularContent: some View {
+        ZStack {
+            AccessoryWidgetBackground()
+            StatusIconView(bikesMounted: entry.bikesMounted, size: .accessoryCircular)
+        }
+    }
+
+    private var accessoryRectangularContent: some View {
+        HStack(spacing: 6) {
+            StatusIconView(bikesMounted: entry.bikesMounted, size: .accessoryRectangular)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text("BikeBonk")
+                    .font(.caption2)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.secondary)
+                StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 13)
+                    .fontWeight(.semibold)
+            }
+        }
     }
 }
 
@@ -121,7 +160,7 @@ struct BikeBonkWidget: Widget {
         }
         .configurationDisplayName("BikeBonk")
         .description("Quick access to your bike rack status")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
     }
 }
 
@@ -139,6 +178,34 @@ struct BikeBonkWidget: Widget {
     BikeBonkEntry(date: .now, bikesMounted: true)
 }
 
+// MARK: - StandBy/CarPlay Preview Views
+// These simulate StandBy appearance: no background, full-bleed content
+
+struct StandByPreviewView: View {
+    let bikesMounted: Bool
+
+    var body: some View {
+        // StandBy shows systemSmall without background, scaled up
+        VStack(spacing: 12) {
+            StatusIconView(bikesMounted: bikesMounted, size: .widgetMedium)
+
+            StatusTextView(bikesMounted: bikesMounted, fontSize: 18)
+                .fontWeight(.semibold)
+                .lineLimit(2)
+        }
+        .frame(width: 170, height: 170)
+        .background(Color.black)
+    }
+}
+
+#Preview("StandBy - Safe") {
+    StandByPreviewView(bikesMounted: false)
+}
+
+#Preview("StandBy - Warning") {
+    StandByPreviewView(bikesMounted: true)
+}
+
 #Preview("Medium - Safe", as: .systemMedium) {
     BikeBonkWidget()
 } timeline: {
@@ -146,6 +213,32 @@ struct BikeBonkWidget: Widget {
 }
 
 #Preview("Medium - Warning", as: .systemMedium) {
+    BikeBonkWidget()
+} timeline: {
+    BikeBonkEntry(date: .now, bikesMounted: true)
+}
+
+// MARK: - Accessory Widget Previews (Lock Screen, StandBy, CarPlay)
+
+#Preview("Circular - Safe", as: .accessoryCircular) {
+    BikeBonkWidget()
+} timeline: {
+    BikeBonkEntry(date: .now, bikesMounted: false)
+}
+
+#Preview("Circular - Warning", as: .accessoryCircular) {
+    BikeBonkWidget()
+} timeline: {
+    BikeBonkEntry(date: .now, bikesMounted: true)
+}
+
+#Preview("Rectangular - Safe", as: .accessoryRectangular) {
+    BikeBonkWidget()
+} timeline: {
+    BikeBonkEntry(date: .now, bikesMounted: false)
+}
+
+#Preview("Rectangular - Warning", as: .accessoryRectangular) {
     BikeBonkWidget()
 } timeline: {
     BikeBonkEntry(date: .now, bikesMounted: true)

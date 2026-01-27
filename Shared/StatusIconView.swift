@@ -30,6 +30,8 @@ struct StatusIconView: View {
         case widget
         case widgetMedium
         case watch
+        case accessoryCircular
+        case accessoryRectangular
 
         var iconSize: CGFloat {
             switch self {
@@ -37,6 +39,8 @@ struct StatusIconView: View {
             case .widget: return 44
             case .widgetMedium: return 64
             case .watch: return 50
+            case .accessoryCircular: return 24
+            case .accessoryRectangular: return 32
             }
         }
 
@@ -46,6 +50,8 @@ struct StatusIconView: View {
             case .widget: return 16
             case .widgetMedium: return 20
             case .watch: return 18
+            case .accessoryCircular: return 10
+            case .accessoryRectangular: return 12
             }
         }
 
@@ -55,6 +61,8 @@ struct StatusIconView: View {
             case .widget: return CGPoint(x: 8, y: -4)
             case .widgetMedium: return CGPoint(x: 12, y: -6)
             case .watch: return CGPoint(x: 10, y: -5)
+            case .accessoryCircular: return CGPoint(x: 5, y: -2)
+            case .accessoryRectangular: return CGPoint(x: 6, y: -3)
             }
         }
     }
