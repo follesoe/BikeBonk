@@ -100,17 +100,19 @@ struct StatusIconView: View {
 struct StatusTextView: View {
     let bikesMounted: Bool
     let fontSize: CGFloat
+    let alignment: TextAlignment
 
-    init(bikesMounted: Bool, fontSize: CGFloat = 32) {
+    init(bikesMounted: Bool, fontSize: CGFloat = 32, alignment: TextAlignment = .center) {
         self.bikesMounted = bikesMounted
         self.fontSize = fontSize
+        self.alignment = alignment
     }
 
     var body: some View {
         Text(String(localized: String.LocalizationValue(Theme.statusKey(for: bikesMounted))))
             .font(.system(size: fontSize, weight: .bold))
             .foregroundColor(.white)
-            .multilineTextAlignment(.center)
+            .multilineTextAlignment(alignment)
     }
 }
 

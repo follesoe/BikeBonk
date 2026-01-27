@@ -103,7 +103,7 @@ struct BikeBonkWidgetEntryView: View {
 
             StatusTextView(
                 bikesMounted: entry.bikesMounted,
-                fontSize: isStandByOrCarPlay ? 18 : 12
+                fontSize: isStandByOrCarPlay ? 20 : 14
             )
             .fontWeight(.semibold)
             .lineLimit(2)
@@ -115,7 +115,7 @@ struct BikeBonkWidgetEntryView: View {
         HStack(spacing: 20) {
             StatusIconView(bikesMounted: entry.bikesMounted, size: .widgetMedium)
 
-            StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 18)
+            StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 22)
 
             Spacer()
         }
@@ -138,9 +138,11 @@ struct BikeBonkWidgetEntryView: View {
                     .font(.caption2)
                     .fontWeight(.medium)
                     .foregroundStyle(.secondary)
-                StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 13)
+                StatusTextView(bikesMounted: entry.bikesMounted, fontSize: 13, alignment: .leading)
                     .fontWeight(.semibold)
             }
+
+            Spacer()
         }
     }
 }
